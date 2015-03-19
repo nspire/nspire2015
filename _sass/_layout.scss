@@ -6,38 +6,68 @@ header {
     .nspire-navbar {
         background: $nspire-blue;
         color: #FFFFFF;
-        .nspire-navbar-event-blurb {
-            margin-top: 27px;
-            text-align: right;
-            font-size: 15px;
-            .lead {
-                font-size: 20px;
-                font-weight: 600;
+        .nspire-nav-logo {
+            display: inline-block;
+            float: left;
+            img {
+                width: 300px;
             }
         }
-        .nspire-navbar-event-button {
-            button {
-                font-size: 22px;
-                color: $nspire-blue;
-                background: #FFFFFF;
-                border-bottom: 5px solid #BED8F5;
-                border-radius: 7px;
-                &:hover {
-                    border-bottom: none;
-                    margin-top: 5px;
+        .nspire-navbar-event {
+            float: right;
+            display: inline-block;
+            padding-right: 31px;
+            .nspire-navbar-event-blurb {
+                display: inline-block;
+                padding-top: 27px;
+                padding-right: 15px;
+                text-align: right;
+                font-size: 15px;
+                .blurb {
+                    .lead {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
                 }
+                
             }
-            margin-top: 27px;          
+            .nspire-navbar-event-button {
+                button {
+                    font-size: 22px;
+                    color: $nspire-blue;
+                    background: #FFFFFF;
+                    border-bottom: 5px solid #BED8F5;
+                    border-radius: 7px;
+                    &:hover {
+                        border-bottom: none;
+                        margin-top: 5px;
+                    }
+                }
+                display: inline-block;
+                position: relative;
+                top: -12px         
+            }
         }
         .nspire-navbar-navigation {
+            button {
+                background-color: #FFFFFF;
+                span {
+                    color: $nspire-blue;
+                }
+                &:active {
+                    background-color: #FFFFFF;
+                }
+            }
             ul {
+                clear: both;
                 li {
                     display: inline-block;
                     padding: 0px 28px;
                     font-size: 16px;
                     .separator {
-                        padding: 0;
-                        border-right: 4px solid #FFFFFF;
+                        padding-top: 5;
+                        height:20px;
+                        border-right: 2px solid #FFFFFF;
                     }
                     a {
                         color: #FFFFFF;
@@ -50,6 +80,11 @@ header {
         }
     }
 }
+
+.ds {
+    height: 1000px;
+}
+
 /**
  * Site footer
  */
@@ -72,6 +107,22 @@ header {
         &:hover{
             text-decoration: none;
             color: $footer-link-color;
+        }
+    }
+}
+
+/* Responsive for navbar*/
+@media (max-width: 767px) {
+    header {
+        .nspire-navbar {
+            .nspire-nav-logo {
+                img {
+                    width:130px;
+                }
+            }
+            .nspire-navbar-event {
+                display: none;
+            }
         }
     }
 }

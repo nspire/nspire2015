@@ -1,30 +1,40 @@
 <header>
 
   <nav class="navbar navbar-default navbar-fixed-top nspire-navbar">
-    <div class="row">
-      <div class="col-md-3">
-        <img src="img/nspire_logo_white.svg">
+    <div class="nspire-nav-toggle">
+      <div class="nspire-nav-logo">
+        <img src="{{ site.baseurl }}/img/nspire_logo_white.svg">
       </div>
-      <div class="col-md-offset-4 col-md-2 nspire-navbar-event-blurb">
-        <span class="lead">Next Event</span><br>
-        November 14, 2014
-      </div>
-      <div class="col-md-3 nspire-navbar-event-button">
-        <button type="button" class="btn btn-default">
-        24 Hour Start-Up
-      </button>
+      <div class="nspire-navbar-event">
+        <div class="nspire-navbar-event-blurb">
+          <div class="blurb">
+          <span class="lead">Next Event</span><br>
+            November 14, 2014
+          </div>
+        </div>
+        <div class="nspire-navbar-event-button">
+          <button type="button" class="btn btn-default">
+          24 Hour Start-Up
+        </button>
+        </div>
       </div>
     </div>
     <div class="nspire-navbar-navigation">
-      <ul>
-        <li><a href="">About</a></li>
-        <li><a href="">NBTC</a></li>
-        <li><a href="">Discovery Series</a></li>
-        <li><a href="">Nspire TV</a></li>
-        <li><a href="">Team</a></li>
-        <li class="separator"></li>
-        <li><a href="">Contact</a></li>
-      </ul>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nspire-main-nav">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="nspire-main-nav">
+        <ul class="nav navbar-nav">
+          <li><a href="">About</a></li>
+          <li><a href="">NBTC</a></li>
+          <li><a href="">Discovery Series</a></li>
+          <li><a href="">Nspire TV</a></li>
+          <li><a href="">Team</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
